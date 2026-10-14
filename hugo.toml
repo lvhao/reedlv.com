@@ -1,0 +1,40 @@
+baseURL = "https://reedlv.com/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "Reed's Blog"
+theme = "PaperMod"
+enableEmoji = true
+enableRobotsTXT = true
+
+[pagination]
+pagerSize = 10
+
+[params]
+env = "production"
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+TocOpen = false
+
+  [params.homeInfoParams]
+  Title = "Hi, 我是 Reed"
+  Content = "这里是我的个人博客，记录技术、产品与思考。"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/lvhao"
+
+[markup]
+  [markup.highlight]
+  noClasses = false
+  lineNos = false
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[minify]
+disableXML = true
