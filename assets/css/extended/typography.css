@@ -22,3 +22,41 @@
   justify-content: center;
   padding-left: 0;
 }
+
+/* Hero 紧凑化：首屏即见文章列表，不为一句话撑满一屏 */
+.first-entry.home-info {
+  min-height: 0;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.home-info .entry-header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.home-info .entry-content {
+  --content-gap: 0.25rem;
+}
+
+.home-info .entry-content p {
+  margin: 0.25em 0;
+  color: var(--secondary);
+}
+
+.home-info .social-icons {
+  margin-top: 0.75rem;
+}
+
+.home-info .social-icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 文章列表行密度微调 */
+.entry {
+  padding: 1rem 0;
+}
+
+.entry-footer {
+  margin-top: 0.5rem;
+}
