@@ -1,0 +1,27 @@
+{{- $scratch := newScratch }}
+
+{{- if not .Date.IsZero -}}
+    {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
+{{- end }}
+
+{{/* 中文博客覆盖：ShowReadingTime 开关在此渲染为「字数统计」而非英文分词的阅读时长 */}}
+{{- if (.Param "ShowReadingTime") -}}
+    {{- $chars := strings.RuneCount (strings.TrimSpace .Plain) }}
+    {{- $scratch.Add "meta" (slice (printf "<span title='字数（含标点）'>约 %d 字</span>" $chars)) }}
+{{- end }}
+
+{{- if (.Param "ShowWordCount") -}}
+    {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+{{- end }}
+
+{{- if not (.Param "hideAuthor") -}}
+    {{- with (partial "author.html" .) }}
+        {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
+    {{- end }}
+{{- end }}
+
+{{/* Combine all meta information into a single string with separators and render it as HTML.*/}}
+
+{{- with ($scratch.Get "meta") }}
+    {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}

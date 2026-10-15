@@ -1,0 +1,24 @@
+/* 中文阅读体验优化（PaperMod 自动加载 assets/css/extended/ 下所有样式） */
+.post-content {
+  line-height: 1.85;
+}
+
+.post-content p {
+  text-align: justify;
+}
+
+.post-content table {
+  display: table;
+  width: 100%;
+}
+
+/* 首页个人信息区居中 */
+.home-info {
+  text-align: center;
+}
+
+.home-info .social-icons {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}

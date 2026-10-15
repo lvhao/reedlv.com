@@ -12,6 +12,7 @@ pagerSize = 10
 [params]
 env = "production"
 defaultTheme = "auto"
+DateFormat = "2006-01-02"
 ShowReadingTime = true
 ShowShareButtons = false
 ShowPostNavLinks = true
@@ -21,12 +22,18 @@ ShowToc = true
 TocOpen = false
 
   [params.homeInfoParams]
-  Title = "Hi, 我是 Reed"
-  Content = "这里是我的个人博客，记录技术、产品与思考。"
+  Title = "Hi, I'm Reed"
+  Content = "思辨中工作，感悟中生活。"
 
   [[params.socialIcons]]
   name = "github"
   url = "https://github.com/lvhao"
+  title = "GitHub"
+
+  [[params.socialIcons]]
+  name = "email"
+  url = "mailto:lvhao127@gmail.com"
+  title = "lvhao127@gmail.com"
 
 [markup]
   [markup.highlight]
