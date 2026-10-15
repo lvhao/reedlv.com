@@ -10,14 +10,19 @@ enableRobotsTXT = true
 pagerSize = 10
 
 [[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
 name = "归档"
 url = "/archives/"
-weight = 1
+weight = 2
 
 [[menu.main]]
 name = "标签"
 url = "/tags/"
-weight = 2
+weight = 3
 
 [params]
 env = "production"
