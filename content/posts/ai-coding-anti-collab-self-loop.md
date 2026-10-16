@@ -1,5 +1,5 @@
 +++
-title = "AI Coding 核心趋势：反协作与自循环"
+title = "AI Coding 趋势思考"
 date = 2026-09-15
 draft = false
 tags = ["AI", "工作"]
